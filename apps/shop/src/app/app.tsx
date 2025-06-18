@@ -6,9 +6,15 @@ const Products = React.lazy(() => import('products/Module'));
 const Cart = React.lazy(() => import('cart/Module'));
 const Checkout = React.lazy(() => import('checkout/Module'));
 
+import Home from './Home';
+
+
 export function App() {
+
+
   return (
     <React.Suspense fallback={null}>
+    
       <ul>
         <li>
           <Link to="/">Home</Link>
@@ -24,12 +30,13 @@ export function App() {
         </li>
       </ul>
       <Routes>
-        <Route path="/" element={<NxWelcome title="shop" />} />
+        <Route path="/" element={<Home  />} />
         <Route path="/products" element={<Products />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/checkout" element={<Checkout />} />
       </Routes>
     </React.Suspense>
+    
   );
 }
 
