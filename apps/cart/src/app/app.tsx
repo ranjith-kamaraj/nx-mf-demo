@@ -1,7 +1,4 @@
 import styled from 'styled-components';
-import NxWelcome from './nx-welcome';
-
-import {get} from 'lodash';
 
 const StyledApp = styled.div`
   // Your style here
@@ -10,7 +7,7 @@ const StyledApp = styled.div`
 export function App() {
   return (
     <StyledApp>
-      <NxWelcome title="cart" />
+      <h2>Cart</h2>
     </StyledApp>
   );
 }
